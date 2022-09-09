@@ -3,5 +3,5 @@ from .models import Pagina
 
 
 # Create your views here.
-def index():
-    return None
+def index(request):
+    return render(request, 'geral/blog.html')
