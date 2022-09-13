@@ -23,7 +23,7 @@ class Pagina(models.Model):
     conteudo = models.TextField()
     categorias = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
     descricao = models.TextField(blank=True)
-    titulo = models.CharField(max_length=40)
+    titulo = models.CharField(max_length=100)
     imagem = models.CharField(max_length=500, blank=True)
     autor = models.ForeignKey(Autor, on_delete=models.DO_NOTHING)
 
