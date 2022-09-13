@@ -16,10 +16,12 @@
       <section class="cards">
         {% for pagina in paginas %}
         <article>
-          <img id="pokeball" class="article-img" src="{{pagina.imagem}}" alt=" " />
-          <h1 class="article-title">
-            {{pagina.titulo}}
-          </h1>
+          <a href="{% url 'exibir_pagina' pagina.id %}">
+            <img id="pokeball" class="article-img" src="{{pagina.imagem}}" alt=" " />
+            <h1 class="article-title">
+              {{pagina.titulo}}
+            </h1>
+          </a>
         </article>
         {% endfor %}
       </section>
