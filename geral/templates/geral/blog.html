@@ -14,60 +14,14 @@
     </header>
     <main>
       <section class="cards">
+        {% for pagina in paginas %}
         <article>
-          <img id="pokeball" class="article-img" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/06/meloetta-tree.jpg" alt=" " />
+          <img id="pokeball" class="article-img" src="{{pagina.imagem}}" alt=" " />
           <h1 class="article-title">
-            Pokemon do dia
+            {{pagina.titulo}}
           </h1>
         </article>
-        <article>
-          <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-          <h1 class="article-title">
-            Dragonite
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-          <h1 class="article-title">
-            Mimikyu
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-          <h1 class="article-title">
-            Kadabra
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-          <h1 class="article-title">
-            Shuckle
-          </h1>
-        </article>
-        <article>
-          <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-          <h1 class="article-title">
-            Shedinja
-          </h1>
-        </article>
-        <article>
-            <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-            <h1 class="article-title">
-              Dragonite
-            </h1>
-        </article>
-        <article>
-            <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-            <h1 class="article-title">
-              Dragonite
-            </h1>
-        </article>
-        <article>
-            <img class="article-img" src="https://i.gifer.com/Sq04.gif" alt=" " />
-            <h1 class="article-title">
-              Dragonite
-            </h1>
-        </article>
+        {% endfor %}
       </section>
       <h1 class="next">Next</h1>
     </main>
