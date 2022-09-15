@@ -1,7 +1,12 @@
 from django.contrib import admin
 from .models import Categoria, Pagina, Autor
-# Register your models here.
+
+
+class PaginaAdmin(admin.ModelAdmin):
+    list_display = ['titulo', 'data', 'categorias', 'autor']
+    search_fields = ['categorias', 'autor', 'titulo']
+
 
 admin.site.register(Categoria)
 admin.site.register(Autor)
-admin.site.register(Pagina)
+admin.site.register(Pagina, PaginaAdmin)

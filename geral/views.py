@@ -12,7 +12,7 @@ def index(request):
 
 def exibir(request, id_blog):
     blog = get_object_or_404(Pagina, id=id_blog)
-    return render(request, 'geral/exibir_paginas.html',
+    return render(request, 'geral/artigo.html',
                   {'blog': blog})
 
 

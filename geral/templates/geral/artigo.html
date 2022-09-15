@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AAAAAAAAAAAAAAAAAAAA</title>
-    <link rel="stylesheet" href="artigo_style.css">
+    <link href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png" rel="icon" type="image/x-icon" />
+    <title>{{blog.titulo}}</title>
+    <style>{% include 'geral/partials/artigo_style.css'%}</style>
 </head>
 <body>
+    <a href="/" class="previous">&laquo; Voltar</a>
     <div class="head">
-        <h1>Eu sou Eu</h1>
-        <h2>Nós somos Nós</h2>
+        <h1>{{blog.titulo}}</h1>
+        <h2>{% autoescape off %}{{blog.descricao}}{% endautoescape %}</h2>
     </div>
-    <img id="image" src="https://img.olhardigital.com.br/wp-content/uploads/2022/01/ThreeNightsPerseids-Nasa-Apod-1024x450.jpg" alt="">
-    <p class="data">um dia ai</p>
+    <img id="image" src="{{blog.imagem}}" alt="">
     <div class="conteudo">
-            Salamence
-        Aqui temos um clássico Pokémon ofensivo, que reúne altos valores de velocidade e ataques físico e especial.
-        O tipo dragão/voador de Salamance contribui para isso, proporcionando acesso a vários movimentos poderosos. 
-        Suas habilidades Moxie e Intimidate também são bastante interessantes durante as lutas.
-        <strong>Autor: </strong>algum nome sem noção de sua preferencia
+        {{blog.conteudo|linebreaks}}
+        <strong>Autor: </strong>{{blog.autor}}
+        <p class="data">{{blog.data | date:'d/m/Y'}}</p>
     </div>
 </body>
 </html>
